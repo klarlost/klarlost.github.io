@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klarlöst – AI-automation för små och medelstora företag i Göteborg</title>
+<meta name="description" content="Klarlöst hjälper små och medelstora företag att spara tid med AI-kundassistent, automatisk bokning, påminnelser och skräddarsydda automationer. Personligt och lokalt i Göteborg.">
+<meta name="theme-color" content="#14332F">
+<link rel="canonical" href="https://klarlost.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Klarlöst">
+<meta property="og:title" content="Klarlöst – Vi gör vardagen klarlöst">
+<meta property="og:description" content="AI-automation och digitala lösningar för små och medelstora företag. Personligt och lokalt i Göteborg.">
+<meta property="og:url" content="https://klarlost.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314332F'/%3E%3Cpath d='M22 16v32M22 33l17-17M28 28l13 20' stroke='%23F7F4EE' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='46' cy='18' r='3.5' fill='%23C98A5E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F4EE; --paper:#FFFFFF; --ink:#14332F; --muted:#51605D; --line:#E2DDD3;
+  --accent:#9C5530; --accent-soft:#C98A5E;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --w:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.12;margin:0}
+h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+p{margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:1rem}
+.lead{color:var(--muted);font-size:1.125rem;max-width:36rem}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--ink);color:#fff;padding:.5rem 1rem;z-index:10}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* header */
+header{position:sticky;top:0;z-index:5;background:rgba(247,244,238,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--serif);font-size:1.35rem;letter-spacing:-.01em}
+.nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0;font-size:.95rem}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+@media (max-width:760px){.nav ul{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;font:500 .975rem var(--sans);text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--ink);color:#F7F4EE}
+.btn-primary:hover{background:#0C2421}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-sm{padding:.55rem 1rem;font-size:.9rem}
+.arrow{transition:transform .2s}.btn:hover .arrow,.link:hover .arrow{transform:translateX(3px)}
+.link{color:var(--accent);text-decoration:none;font-weight:500;display:inline-flex;gap:.4rem;border-bottom:1px solid transparent;transition:border-color .2s}
+.link:hover{border-color:currentColor}
+
+/* hero */
+.hero{padding:clamp(4rem,12vw,8.5rem) 0 clamp(4rem,9vw,6.5rem)}
+.hero h1{font-size:clamp(2.6rem,7.2vw,5rem);max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lead{margin-top:1.6rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.4rem}
+.hero small{display:block;margin-top:1.4rem;color:var(--muted);font-size:.9rem}
+
+section{padding:clamp(4rem,9vw,6.5rem) 0;border-top:1px solid var(--line)}
+.head{display:grid;gap:1rem;margin-bottom:3rem}
+@media (min-width:860px){.head{grid-template-columns:1fr 1fr;align-items:end;gap:3rem}}
+
+/* services list */
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:2.5rem 1fr;gap:.25rem 1rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+@media (min-width:760px){.list li{grid-template-columns:3.5rem 18rem 1fr;align-items:baseline;gap:2rem;padding:1.7rem 0}}
+.num{font-family:var(--serif);color:var(--accent);font-size:.95rem}
+.list h3{font-size:1.35rem}
+.list p{color:var(--muted);grid-column:2}
+@media (min-width:760px){.list p{grid-column:auto}}
+.trades{margin-top:2.5rem;color:var(--muted);font-size:.98rem}
+.trades strong{color:var(--ink);font-weight:500}
+
+/* steps */
+.steps{display:grid;gap:2rem;list-style:none;padding:0;margin:0;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(4,1fr);gap:2rem}}
+.steps li{counter-increment:s;border-top:1px solid var(--ink);padding-top:1.2rem}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);color:var(--accent);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.25rem;margin-bottom:.4rem}
+.steps p{color:var(--muted);font-size:.98rem}
+
+/* pricing */
+.prices{display:grid;gap:1.25rem}
+@media (min-width:860px){.prices{grid-template-columns:1.15fr 1fr}}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-direction:column}
+.plan h3{font-size:1.6rem}
+.plan .for{color:var(--muted);margin-top:.35rem}
+.price{font-family:var(--serif);font-size:2.6rem;margin:1.6rem 0 .2rem;letter-spacing:-.02em}
+.price span{font-family:var(--sans);font-size:1rem;color:var(--muted);letter-spacing:0}
+.plan ul{list-style:none;padding:0;margin:1.4rem 0 2rem;display:grid;gap:.6rem}
+.plan li{padding-left:1.4rem;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.7em;width:.55rem;height:1px;background:var(--accent)}
+.plan .btn{align-self:flex-start;margin-top:auto}
+.plan.dark{background:var(--ink);color:#F7F4EE;border-color:var(--ink)}
+.plan.dark .for,.plan.dark .price span,.plan.dark .note{color:#BFCBC8}
+.plan.dark li::before{background:var(--accent-soft)}
+.plan.dark .btn-primary{background:#F7F4EE;color:var(--ink)}
+.plan.dark .btn-primary:hover{background:#fff}
+.note{font-size:.88rem;color:var(--muted);margin-top:1rem}
+
+/* demo band */
+.demo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 1.5rem;margin-top:1.25rem;padding:1.6rem clamp(1.6rem,4vw,2.4rem);border:1px solid var(--line);border-radius:18px}
+.demo p{font-family:var(--serif);font-size:1.3rem}
+.demo p span{display:block;font-family:var(--sans);font-size:.95rem;color:var(--muted);margin-top:.2rem}
+
+/* about + contact */
+.about{display:grid;gap:2rem}
+@media (min-width:860px){.about{grid-template-columns:1fr 1.3fr;gap:4rem}}
+.about p+p{margin-top:1rem}
+.about .body{color:var(--muted);font-size:1.1rem}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.2rem,5.5vw,3.6rem);max-width:16ch;margin:0 auto}
+.contact .actions{justify-content:center}
+.cinfo{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 2rem;margin-top:2.2rem;color:var(--muted)}
+.cinfo a{text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s;color:var(--ink)}
+.cinfo a:hover{border-color:var(--ink)}
+
+footer{border-top:1px solid var(--line);padding:2rem 0;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem}
+footer a{text-decoration:none}footer a:hover{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Hoppa till innehåll</a>
+
+<header>
+  <nav class="wrap nav" aria-label="Huvudmeny">
+    <a class="brand" href="#" aria-label="Klarlöst – till startsidan">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14332F"/><path d="M22 16v32M22 33l17-17M28 28l13 20" stroke="#F7F4EE" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="46" cy="18" r="3.5" fill="#C98A5E"/></svg>
+      Klarlöst
+    </a>
+    <ul>
+      <li><a href="#tjanster">Tjänster</a></li>
+      <li><a href="#sa-funkar-det">Så funkar det</a></li>
+      <li><a href="#priser">Priser</a></li>
+      <li><a href="#om">Om oss</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="wrap hero">
+    <p class="eyebrow">AI-automation · Göteborg</p>
+    <h1>Vi gör vardagen <em>klarlöst</em>.</h1>
+    <p class="lead">AI-automation och digitala lösningar för små och medelstora företag. Mindre administration, fler nöjda kunder – och mer tid till det du är bra på.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:jesper.klarlost@gmail.com?subject=Boka%20ett%20kostnadsfritt%20samtal">Boka ett kostnadsfritt samtal <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="https://klarlost.github.io/demo/">Testa demon</a>
+    </div>
+    <small>15 minuter, helt utan förpliktelser.</small>
+  </div>
+
+  <section id="tjanster">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Tjänster</p><h2>Det vi automatiserar åt dig</h2></div>
+        <p class="lead">Smarta flöden som tar hand om de återkommande uppgifterna – så att du slipper.</p>
+      </div>
+      <ul class="list">
+        <li><span class="num">01</span><h3>AI-kundassistent</h3><p>Svarar på kundernas frågor dygnet runt – på hemsidan och i sociala medier.</p></li>
+        <li><span class="num">02</span><h3>Bokning &amp; leads</h3><p>Fångar bokningar och förfrågningar automatiskt, så att inget faller mellan stolarna.</p></li>
+        <li><span class="num">03</span><h3>Påminnelser &amp; uppföljning</h3><p>SMS och mejl för påminnelser, återbokning och recensionsförfrågningar.</p></li>
+        <li><span class="num">04</span><h3>Offert &amp; fakturaflöden</h3><p>Från förfrågan till offert och faktura – med färre manuella steg.</p></li>
+        <li><span class="num">05</span><h3>Inkorg &amp; kundtjänst</h3><p>Sortering av inkommande mejl och färdiga svarsutkast att godkänna.</p></li>
+        <li><span class="num">06</span><h3>Skräddarsydda automationer</h3><p>Formulär, CRM, rapporter och kopplingar mellan de system du redan använder.</p></li>
+      </ul>
+      <p class="trades"><strong>Passar bland annat</strong> salonger &amp; skönhet, hantverkare, kliniker, restauranger, byråer samt butiker &amp; e-handel.</p>
+    </div>
+  </section>
+
+  <section id="sa-funkar-det">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Så funkar det</p><h2>Enkelt från start</h2></div>
+        <p class="lead">Fyra steg – och du behöver inte kunna något om AI.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Kostnadsfritt samtal</h3><p>15 minuter där vi går igenom din vardag och vad som tar mest tid.</p></li>
+        <li><h3>Vi bygger lösningen</h3><p>Anpassad efter ditt företag och de verktyg du redan har.</p></li>
+        <li><h3>30 dagars provperiod</h3><p>Testa i skarpt läge innan du bestämmer dig.</p></li>
+        <li><h3>Vi finns kvar</h3><p>Löpande stöd och förbättringar när verksamheten förändras.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="priser">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Priser</p><h2>Tydliga priser</h2></div>
+        <p class="lead">Alla priser anges exklusive moms.</p>
+      </div>
+      <div class="prices">
+        <article class="plan dark">
+          <h3>SalongsAssistenten</h3>
+          <p class="for">Färdig AI-assistent för salonger.</p>
+          <p class="price">990 kr <span>/ månad</span></p>
+          <ul>
+            <li>2 900 kr i uppstart</li>
+            <li>+400 kr/mån per extra salong</li>
+            <li>30 dagars gratis provperiod</li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:jesper.klarlost@gmail.com?subject=SalongsAssistenten%20%E2%80%93%20boka%20ett%20kostnadsfritt%20samtal">Boka ett samtal <span class="arrow" aria-hidden="true">→</span></a>
+          <p class="note">Exkl. moms.</p>
+        </article>
+        <article class="plan">
+          <h3>Skräddarsydd lösning</h3>
+          <p class="for">För alla andra företag och behov.</p>
+          <p class="price">Efter behov</p>
+          <ul>
+            <li>Offert inom 24 h</li>
+            <li>Byggs för just din verksamhet</li>
+            <li>Kostnadsfritt första samtal</li>
+          </ul>
+          <a class="btn btn-ghost" href="mailto:jesper.klarlost@gmail.com?subject=Offertf%C3%B6rfr%C3%A5gan%20%E2%80%93%20skr%C3%A4ddarsydd%20l%C3%B6sning">Begär offert <span class="arrow" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <div class="demo" id="demo">
+        <p>Se hur det fungerar<span>Testa vår demo för en påhittad salong.</span></p>
+        <a class="link" href="https://klarlost.github.io/demo/">Öppna demon <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="om">
+    <div class="wrap about">
+      <div><p class="eyebrow">Om oss</p><h2>Lokalt och personligt</h2></div>
+      <div class="body">
+        <p>Klarlöst startades av Jesper Johannesson i Göteborg med en enkel idé: att hjälpa små företag att spara tid med AI – utan krångel och utan tekniksnack.</p>
+        <p>Du får en person att prata med, lösningar som passar din vardag och någon som finns kvar efteråt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="wrap">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Redo att göra vardagen lite enklare?</h2>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:jesper.klarlost@gmail.com?subject=Boka%20ett%20kostnadsfritt%20samtal">Boka ett kostnadsfritt samtal <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="cinfo">
+        <a href="tel:+46760058387">076-005 83 87</a>
+        <a href="mailto:jesper.klarlost@gmail.com">jesper.klarlost@gmail.com</a>
+        <span>Göteborg</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Klarlöst · Göteborg</span>
+    <span><a href="tel:+46760058387">076-005 83 87</a> · <a href="mailto:jesper.klarlost@gmail.com">jesper.klarlost@gmail.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
