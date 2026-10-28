@@ -3,268 +3,354 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Klarlöst – AI-automation för små och medelstora företag i Göteborg</title>
-<meta name="description" content="Klarlöst hjälper små och medelstora företag att spara tid med AI-kundassistent, automatisk bokning, påminnelser och skräddarsydda automationer. Personligt och lokalt i Göteborg.">
-<meta name="theme-color" content="#14332F">
+<title>Klarlöst – Vi gör vardagen enklare för ditt företag</title>
+<meta name="description" content="Klarlöst gör vardagen enklare för företag: mindre administration, färre missade kunder och mer tid – med smart AI och automation. 2 900 kr i start + 990 kr/mån exkl. moms. Testa gratis i 30 dagar.">
+<meta property="og:title" content="Klarlöst – Vi gör vardagen enklare för ditt företag">
+<meta property="og:description" content="Mindre administration, färre missade kunder och mer tid för det viktiga. Testa gratis i 30 dagar.">
+<meta property="og:image" content="https://klarlost.github.io/og-bild.png">
 <link rel="canonical" href="https://klarlost.github.io/">
+<meta property="og:url" content="https://klarlost.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
-<meta property="og:site_name" content="Klarlöst">
-<meta property="og:title" content="Klarlöst – Vi gör vardagen klarlöst">
-<meta property="og:description" content="AI-automation och digitala lösningar för små och medelstora företag. Personligt och lokalt i Göteborg.">
-<meta property="og:url" content="https://klarlost.github.io/">
-<meta name="twitter:card" content="summary">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314332F'/%3E%3Cpath d='M22 16v32M22 33l17-17M28 28l13 20' stroke='%23F7F4EE' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='46' cy='18' r='3.5' fill='%23C98A5E'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#F3EEE6">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:Fraunces;src:url(fonts/fraunces.woff2) format("woff2");font-weight:500 600;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(fonts/dm-sans.woff2) format("woff2");font-weight:400 600;font-display:swap}
 :root{
-  --bg:#F7F4EE; --paper:#FFFFFF; --ink:#14332F; --muted:#51605D; --line:#E2DDD3;
-  --accent:#9C5530; --accent-soft:#C98A5E;
-  --serif:"Fraunces",Georgia,"Times New Roman",serif;
-  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --w:1080px;
+  --bg:#F3EEE6;--bg2:#ECE4D7;--card:#FBF8F3;--line:rgba(23,58,49,.11);--line2:rgba(23,58,49,.20);
+  --fg:#15201C;--h:#173A31;--muted:#4F5C56;--dim:#56625C;
+  --a:#1F4A3F;--a2:#3E7A66;--sand:#B8915E;   /* mörkgrön accent + en diskret sandton */
+  --r:18px;--max:1160px;
+  --display:Fraunces,Georgia,"Times New Roman",serif;--sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16.5px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.06;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
 img,svg{display:block}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 1.5rem}
-h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.12;margin:0}
-h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+::selection{background:var(--a);color:#F7F3EC}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+h1,h2,h3{color:var(--h);font-family:var(--display);font-weight:600;letter-spacing:-.02em;line-height:1.06;margin:0;font-optical-sizing:auto}
+h2{font-size:clamp(34px,4.6vw,56px)}
+h3{font-size:20px;letter-spacing:-.008em;line-height:1.25}
 p{margin:0}
-.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:1rem}
-.lead{color:var(--muted);font-size:1.125rem;max-width:36rem}
-.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--ink);color:#fff;padding:.5rem 1rem;z-index:10}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 13px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sand);box-shadow:0 0 0 3px rgba(184,145,94,.18)}
+.sub{color:var(--muted);font-size:18px;max-width:560px;margin-top:18px}
+.grad{background:linear-gradient(100deg,#173A31 0%,#2B5E4F 55%,#3A7461 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+section{padding:120px 0;position:relative}
+.head{margin-bottom:64px}.head .eyebrow{margin-bottom:22px}
+/* knappar */
+.btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;font:500 15px/1 var(--sans);border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn.pri{background:var(--a);color:#F7F3EC;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 10px 28px -12px rgba(23,58,49,.7)}
+.btn.pri:hover{transform:translateY(-1px);background:#173A31;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 14px 34px -12px rgba(23,58,49,.8)}
+.btn.ghost{color:var(--h);background:rgba(255,255,255,.45);box-shadow:inset 0 0 0 1px var(--line2)}
+.btn.ghost:hover{background:rgba(255,255,255,.8)}
+.btn .ar{transition:transform .2s}.btn:hover .ar{transform:translateX(3px)}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--a);color:#F7F3EC;padding:8px 12px;border-radius:8px;z-index:200}.skip:focus{left:8px}
 /* header */
-header{position:sticky;top:0;z-index:5;background:rgba(247,244,238,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--serif);font-size:1.35rem;letter-spacing:-.01em}
-.nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0;font-size:.95rem}
-.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
-.nav ul a:hover{color:var(--ink)}
-@media (max-width:760px){.nav ul{display:none}}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;font:500 .975rem var(--sans);text-decoration:none;transition:background .2s,color .2s,border-color .2s}
-.btn-primary{background:var(--ink);color:#F7F4EE}
-.btn-primary:hover{background:#0C2421}
-.btn-ghost{border:1px solid var(--line);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--ink)}
-.btn-sm{padding:.55rem 1rem;font-size:.9rem}
-.arrow{transition:transform .2s}.btn:hover .arrow,.link:hover .arrow{transform:translateX(3px)}
-.link{color:var(--accent);text-decoration:none;font-weight:500;display:inline-flex;gap:.4rem;border-bottom:1px solid transparent;transition:border-color .2s}
-.link:hover{border-color:currentColor}
-
+.top{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.top.scrolled{background:rgba(243,238,230,.8);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.wordmark{height:34px;width:auto;color:var(--h)}
+.top nav ul{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0;font-size:14.5px;color:var(--muted)}
+.top nav a:hover{color:var(--h)}
+.top .cta a{color:var(--h);padding:9px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line2);background:rgba(255,255,255,.4)}
+.top .cta a:hover{background:rgba(255,255,255,.85)}
 /* hero */
-.hero{padding:clamp(4rem,12vw,8.5rem) 0 clamp(4rem,9vw,6.5rem)}
-.hero h1{font-size:clamp(2.6rem,7.2vw,5rem);max-width:14ch}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero .lead{margin-top:1.6rem}
-.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.4rem}
-.hero small{display:block;margin-top:1.4rem;color:var(--muted);font-size:.9rem}
-
-section{padding:clamp(4rem,9vw,6.5rem) 0;border-top:1px solid var(--line)}
-.head{display:grid;gap:1rem;margin-bottom:3rem}
-@media (min-width:860px){.head{grid-template-columns:1fr 1fr;align-items:end;gap:3rem}}
-
-/* services list */
-.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.list li{display:grid;grid-template-columns:2.5rem 1fr;gap:.25rem 1rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
-@media (min-width:760px){.list li{grid-template-columns:3.5rem 18rem 1fr;align-items:baseline;gap:2rem;padding:1.7rem 0}}
-.num{font-family:var(--serif);color:var(--accent);font-size:.95rem}
-.list h3{font-size:1.35rem}
-.list p{color:var(--muted);grid-column:2}
-@media (min-width:760px){.list p{grid-column:auto}}
-.trades{margin-top:2.5rem;color:var(--muted);font-size:.98rem}
-.trades strong{color:var(--ink);font-weight:500}
-
-/* steps */
-.steps{display:grid;gap:2rem;list-style:none;padding:0;margin:0;counter-reset:s}
-@media (min-width:760px){.steps{grid-template-columns:repeat(4,1fr);gap:2rem}}
-.steps li{counter-increment:s;border-top:1px solid var(--ink);padding-top:1.2rem}
-.steps li::before{content:"0" counter(s);font-family:var(--serif);color:var(--accent);display:block;margin-bottom:.8rem}
-.steps h3{font-size:1.25rem;margin-bottom:.4rem}
-.steps p{color:var(--muted);font-size:.98rem}
-
-/* pricing */
-.prices{display:grid;gap:1.25rem}
-@media (min-width:860px){.prices{grid-template-columns:1.15fr 1fr}}
-.plan{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-direction:column}
-.plan h3{font-size:1.6rem}
-.plan .for{color:var(--muted);margin-top:.35rem}
-.price{font-family:var(--serif);font-size:2.6rem;margin:1.6rem 0 .2rem;letter-spacing:-.02em}
-.price span{font-family:var(--sans);font-size:1rem;color:var(--muted);letter-spacing:0}
-.plan ul{list-style:none;padding:0;margin:1.4rem 0 2rem;display:grid;gap:.6rem}
-.plan li{padding-left:1.4rem;position:relative}
-.plan li::before{content:"";position:absolute;left:0;top:.7em;width:.55rem;height:1px;background:var(--accent)}
-.plan .btn{align-self:flex-start;margin-top:auto}
-.plan.dark{background:var(--ink);color:#F7F4EE;border-color:var(--ink)}
-.plan.dark .for,.plan.dark .price span,.plan.dark .note{color:#BFCBC8}
-.plan.dark li::before{background:var(--accent-soft)}
-.plan.dark .btn-primary{background:#F7F4EE;color:var(--ink)}
-.plan.dark .btn-primary:hover{background:#fff}
-.note{font-size:.88rem;color:var(--muted);margin-top:1rem}
-
-/* demo band */
-.demo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 1.5rem;margin-top:1.25rem;padding:1.6rem clamp(1.6rem,4vw,2.4rem);border:1px solid var(--line);border-radius:18px}
-.demo p{font-family:var(--serif);font-size:1.3rem}
-.demo p span{display:block;font-family:var(--sans);font-size:.95rem;color:var(--muted);margin-top:.2rem}
-
-/* about + contact */
-.about{display:grid;gap:2rem}
-@media (min-width:860px){.about{grid-template-columns:1fr 1.3fr;gap:4rem}}
-.about p+p{margin-top:1rem}
-.about .body{color:var(--muted);font-size:1.1rem}
-.contact{text-align:center}
-.contact h2{font-size:clamp(2.2rem,5.5vw,3.6rem);max-width:16ch;margin:0 auto}
-.contact .actions{justify-content:center}
-.cinfo{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 2rem;margin-top:2.2rem;color:var(--muted)}
-.cinfo a{text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s;color:var(--ink)}
-.cinfo a:hover{border-color:var(--ink)}
-
-footer{border-top:1px solid var(--line);padding:2rem 0;font-size:.9rem;color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem}
-footer a{text-decoration:none}footer a:hover{color:var(--ink)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.hero{padding:178px 0 120px;text-align:center;overflow:hidden}
+.glow{position:absolute;inset:-10% 0 auto;height:900px;pointer-events:none;z-index:-1;
+  background:radial-gradient(40% 38% at 50% 30%,rgba(62,122,102,.20),transparent 70%),radial-gradient(30% 30% at 68% 16%,rgba(184,145,94,.16),transparent 70%),radial-gradient(28% 26% at 30% 22%,rgba(255,255,255,.7),transparent 70%);
+  filter:blur(10px);animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(-3%,2%,0) scale(1.06)}}
+.gridbg{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.7;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;
+  -webkit-mask-image:radial-gradient(60% 55% at 50% 30%,#000,transparent 75%);mask-image:radial-gradient(60% 55% at 50% 30%,#000,transparent 75%)}
+.hero h1{font-size:clamp(44px,7.2vw,90px);max-width:980px;margin:26px auto 0;letter-spacing:-.028em;line-height:1.02}
+.hero .lead{max-width:620px;margin:28px auto 0;color:var(--muted);font-size:19px}
+.hero .actions{display:flex;gap:12px;justify-content:center;margin-top:40px;flex-wrap:wrap}
+.hero .note{margin-top:22px;font-size:14px;color:var(--dim)}.hero .note b{color:var(--fg);font-weight:500}
+.window{position:relative;max-width:760px;margin:88px auto 0;border-radius:22px;padding:1px;text-align:left;
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(23,58,49,.10) 45%,rgba(62,122,102,.35));
+  box-shadow:0 50px 110px -40px rgba(23,58,49,.35),0 20px 40px -24px rgba(23,58,49,.25)}
+.window-in{background:linear-gradient(180deg,#FDFBF7,#F8F3EB);border-radius:21px;overflow:hidden}
+.wbar{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.wbar .dots{display:flex;gap:7px}.wbar .dots i{width:10px;height:10px;border-radius:50%;background:#E2D9CB}
+.wbar b{color:var(--h);font-weight:500;margin-left:6px}
+.wbar .live{margin-left:auto;display:flex;align-items:center;gap:7px}.wbar .live::before{content:"";width:7px;height:7px;border-radius:50%;background:#2E9A68;box-shadow:0 0 0 3px rgba(46,154,104,.18)}
+.msgs{padding:28px 26px 10px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:74%;padding:12px 16px;border-radius:16px;font-size:15px;line-height:1.5}
+.msg.u{align-self:flex-end;background:linear-gradient(135deg,#2B5E4F,#1F4A3F);color:#F7F3EC;border-bottom-right-radius:5px}
+.msg.b{align-self:flex-start;background:#F1EBE1;color:var(--fg);border:1px solid var(--line);border-bottom-left-radius:5px}
+.msg.typing{display:flex;gap:5px;padding:15px 16px}.msg.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite}
+.msg.typing i:nth-child(2){animation-delay:.15s}.msg.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}
+.wcap{padding:12px 26px 20px;font-size:12.5px;color:var(--dim)}
+.js .msgs .msg{opacity:0;transform:translateY(8px)}
+.js .window.in .msg{animation:pop .5s cubic-bezier(.2,.7,.2,1) forwards}
+.js .window.in .msg:nth-child(1){animation-delay:.3s}.js .window.in .msg:nth-child(2){animation-delay:1.1s}
+.js .window.in .msg:nth-child(3){animation-delay:1.9s}.js .window.in .msg:nth-child(4){animation-delay:2.7s}
+@keyframes pop{to{opacity:1;transform:none}}
+/* tjänsten – bento */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{position:relative;background:linear-gradient(180deg,#FDFBF7,var(--card));box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 18px 40px -30px rgba(23,58,49,.25);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 32px;overflow:hidden;transition:border-color .3s}
+.card:hover{border-color:var(--line2)}
+.card::after{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(360px circle at var(--mx,50%) var(--my,0%),rgba(62,122,102,.09),transparent 60%)}
+.card:hover::after{opacity:1}
+.card .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;margin-bottom:26px;background:rgba(31,74,63,.07);box-shadow:inset 0 0 0 1px rgba(31,74,63,.18);color:var(--a)}
+.card .ic svg{width:18px;height:18px}
+.card p{color:var(--muted);margin-top:10px;font-size:15.5px}
+.card.wide{grid-column:span 2}
+.how{margin-top:40px;max-width:720px;color:var(--muted);font-size:15.5px}.how b{color:var(--h);font-weight:600}
+.bento.three .card{padding:36px 32px 38px}.bento.three h3{font-size:22px}
+.fits{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.fits span{font-size:14px;color:var(--muted);padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
+.fits b{font-weight:500;font-size:14px;margin-right:8px}
+/* steg */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
+.steps li{counter-increment:s;padding:34px 28px 0 0;border-top:1px solid var(--line2);position:relative}
+.steps li::before{content:"0" counter(s);display:block;font:500 13px/1 var(--sans);letter-spacing:.1em;color:var(--a);margin-bottom:28px}
+.steps li::after{content:"";position:absolute;top:-1px;left:0;width:56px;height:1px;background:linear-gradient(90deg,var(--a),var(--sand),transparent)}
+.steps p{color:var(--muted);margin-top:12px;font-size:15.5px}
+/* pris */
+.offer{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:6px 13px 6px 11px;border:1px solid var(--line2);border-radius:999px;background:rgba(31,74,63,.06);font:500 13px/1.3 var(--sans);letter-spacing:.01em;color:var(--a)}
+.offer::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--sand)}
+@media (max-width:420px){.offer{font-size:12.5px;gap:8px;padding:7px 12px 7px 10px;border-radius:12px;align-items:baseline}.offer::before{transform:translateY(-1px)}}
+.pricing{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.plan{background:linear-gradient(180deg,#FDFBF7,var(--card));box-shadow:0 24px 60px -40px rgba(23,58,49,.3);border:1px solid var(--line);border-radius:22px;padding:44px}
+.plan .name{font-size:14px;color:var(--muted)}
+.amount{font:600 clamp(60px,8vw,92px)/1 var(--display);letter-spacing:-.03em;margin-top:22px;display:flex;align-items:baseline;gap:10px;color:var(--h)}
+.amount small{font:400 17px var(--sans);letter-spacing:0;color:var(--muted)}
+.start{margin-top:12px;font-size:16px}
+.plan ul{list-style:none;margin:34px 0 36px;padding:0;display:grid;gap:14px}
+.plan li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.plan li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--a)}
+.vat{margin-top:18px;font-size:13px;color:var(--dim)}
+.trial{position:relative;border-radius:22px;padding:44px;overflow:hidden;display:flex;flex-direction:column;
+  background:radial-gradient(120% 90% at 100% 0%,rgba(110,170,145,.28),transparent 60%),radial-gradient(80% 60% at 0% 100%,rgba(184,145,94,.22),transparent 70%),linear-gradient(160deg,#21503F,#143128 75%);border:1px solid #173A31;color:#F7F3EC}
+.trial .big{font:600 120px/.9 var(--display);letter-spacing:-.035em}
+.trial h3{font-size:26px;margin-top:6px;color:#F7F3EC}.trial .big.grad{background:linear-gradient(100deg,#FFFFFF,#EADBC0 55%,#CFAE7C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.trial p{color:#E3EBE5;margin-top:16px;font-size:15.5px}
+.trial .tlink{margin-top:auto;padding-top:36px;font-size:15px;display:inline-flex;gap:8px;align-items:center}
+.trial .tlink:hover{color:#fff}
+/* om */
+.about{display:grid;grid-template-columns:1fr 2fr;gap:64px}
+.statement{font:500 clamp(28px,3.6vw,44px)/1.18 var(--display);letter-spacing:-.015em}
+.statement{color:var(--h)}.statement em{font-style:normal;color:#5C7268}
+.about .txt{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;color:var(--muted);font-size:16px}
+/* kontakt */
+.contact-card{position:relative;border-radius:26px;padding:1px;background:linear-gradient(140deg,rgba(62,122,102,.55),rgba(23,58,49,.10) 40%,rgba(184,145,94,.35))}
+.contact-in{border-radius:25px;background:radial-gradient(70% 90% at 0% 0%,rgba(62,122,102,.12),transparent 60%),#FBF8F3;padding:64px;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.mail{display:inline-block;margin-top:40px;font:500 clamp(22px,2.5vw,30px)/1.2 var(--display);letter-spacing:-.01em;padding-bottom:6px;border-bottom:1px solid var(--line2);transition:border-color .2s,color .2s}
+.mail{color:var(--h)}.mail:hover{border-color:var(--a);color:var(--a)}
+form{display:grid;gap:14px}
+label{display:grid;gap:8px;font-size:13px;color:var(--muted)}
+input,textarea{font:inherit;font-size:15.5px;color:var(--fg);background:#fff;border:1px solid rgba(23,58,49,.58);border-radius:12px;padding:13px 15px;transition:border-color .2s,background .2s}
+input:focus,textarea:focus{outline:0;border-color:var(--a);background:#fff;box-shadow:0 0 0 3px rgba(31,74,63,.12)}
+textarea{min-height:120px;resize:vertical}
+::placeholder{color:#69716C}
+form .btn{justify-self:start;margin-top:8px}
+.note{font-size:12.5px;color:var(--dim)}.note a.ul{color:var(--h);text-decoration:underline;text-underline-offset:2px}
+/* footer */
+footer{border-top:1px solid var(--line);padding:40px 0 48px;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+footer .wordmark{height:28px;color:var(--h)}
+footer a:hover{color:var(--h)}
+/* scroll-reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+/* responsivt */
+@media (max-width:900px){
+  section{padding:100px 0}.hero{padding:140px 0 90px}
+  .top nav li:not(.cta){display:none}
+  .bento,.steps{grid-template-columns:1fr}.card.wide{grid-column:auto}
+  .pricing,.about,.contact-in,.about .txt{grid-template-columns:1fr}
+  .about{gap:28px}.contact-in{padding:40px 28px;gap:44px}.plan,.trial{padding:34px 28px}
+  .steps li{padding:28px 0 8px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 22px}.hero h1{font-size:clamp(38px,10.6vw,54px)}.dbr{display:none}.hero .lead{font-size:17px}
+  .window{margin-top:64px}.msgs{padding:22px 16px 8px}.msg{max-width:86%;font-size:14.5px}.wcap{padding:10px 16px 18px}
+  .head{margin-bottom:44px}
+  .amount{font-size:64px}.trial .big{font-size:96px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .msgs .msg{opacity:1!important;transform:none!important}
+}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<a class="skip" href="#main">Hoppa till innehåll</a>
-
-<header>
-  <nav class="wrap nav" aria-label="Huvudmeny">
-    <a class="brand" href="#" aria-label="Klarlöst – till startsidan">
-      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14332F"/><path d="M22 16v32M22 33l17-17M28 28l13 20" stroke="#F7F4EE" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="46" cy="18" r="3.5" fill="#C98A5E"/></svg>
-      Klarlöst
-    </a>
-    <ul>
-      <li><a href="#tjanster">Tjänster</a></li>
-      <li><a href="#sa-funkar-det">Så funkar det</a></li>
-      <li><a href="#priser">Priser</a></li>
-      <li><a href="#om">Om oss</a></li>
-    </ul>
-    <a class="btn btn-primary btn-sm" href="#kontakt">Kontakt</a>
-  </nav>
-</header>
+<!-- ======================================================================
+     LOGGA – byt logga genom att ersätta EN rad: <symbol id="klarlost-logo" …>
+     Nu: slutlig logga (logo/final/klarlost_logo.svg): märke 07 "Länk" oförändrat + ordbild i Fraunces 600 (som paths). Byggs av src/build_v7.py.
+     Används i header + footer.
+     Ny logga: byt logo/final/klarlost_logo.svg och kör src/build_v7.py.
+     ====================================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="klarlost-logo" viewBox="0 0.00 590.08 152.00"><g transform="scale(0.296875)"><rect width="512" height="512" rx="116" fill="#0E0F11"/><g transform="translate(103.83 103.83) scale(3.0435)"><linearGradient id="klg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100"><stop offset="0" stop-color="#FFB0BF"/><stop offset="1" stop-color="#FF5D7E"/></linearGradient><clipPath id="klc"><rect x="34" y="34" width="62" height="62" rx="18"/></clipPath><rect x="4" y="4" width="62" height="62" rx="18" fill="none" stroke="url(#klg)" stroke-width="7"/><rect x="34" y="34" width="62" height="62" rx="18" fill="none" stroke="url(#klg)" stroke-width="7"/><rect x="4" y="4" width="62" height="62" rx="18" fill="url(#klg)" clip-path="url(#klc)"/></g></g><path d="M217.856 87.26400000000001 254.4 47.072Q256.76800000000003 44.70400000000001 257.376 42.62400000000001Q257.984 40.54400000000001 257.12 39.00800000000001Q256.256 37.47200000000001 254.07999999999998 36.768000000000015L250.752 36.06400000000001Q249.728 35.68000000000001 249.248 35.07200000000001Q248.768 34.46400000000001 248.768 33.56800000000001Q248.768 32.41600000000001 249.44 31.808000000000007Q250.112 31.200000000000003 251.45600000000002 31.200000000000003H275.84000000000003Q277.18399999999997 31.200000000000003 277.856 31.808000000000007Q278.528 32.41600000000001 278.528 33.504000000000005Q278.528 34.528000000000006 277.79200000000003 35.13600000000001Q277.056 35.744000000000014 275.648 36.32000000000001Q274.11199999999997 36.768000000000015 272.67199999999997 37.536000000000016Q271.23199999999997 38.304000000000016 269.504 39.552000000000014Q267.776 40.80000000000001 265.568 42.84800000000001Q263.36 44.896000000000015 260.288 47.968L219.584 91.936ZM232.512 73.24800000000002 245.56799999999998 61.21600000000001 273.92 110.75200000000001Q275.2 112.99200000000002 276.512 114.08000000000001Q277.824 115.168 280.0 115.61600000000001Q281.344 116.06400000000001 281.856 116.70400000000001Q282.368 117.34400000000001 282.368 118.43200000000002Q282.368 119.52000000000001 281.696 120.16000000000001Q281.024 120.80000000000001 279.616 120.80000000000001H250.24Q248.89600000000002 120.80000000000001 248.256 120.16000000000001Q247.61599999999999 119.52000000000001 247.61599999999999 118.43200000000002Q247.61599999999999 117.47200000000001 248.064 116.89600000000002Q248.512 116.32000000000001 249.344 115.936L253.248 115.296Q254.4 114.97600000000001 254.59199999999998 114.01600000000002Q254.784 113.05600000000001 253.56799999999998 110.88000000000001ZM222.912 111.64800000000001Q222.912 112.99200000000002 223.584 113.79200000000002Q224.256 114.59200000000001 225.728 115.04L229.888 115.87200000000001Q230.912 116.25600000000001 231.424 116.864Q231.936 117.47200000000001 231.936 118.43200000000002Q231.936 119.52000000000001 231.232 120.16000000000001Q230.528 120.80000000000001 229.184 120.80000000000001H198.784Q197.44 120.80000000000001 196.736 120.16000000000001Q196.032 119.52000000000001 196.032 118.43200000000002Q196.032 116.64000000000001 198.016 115.87200000000001L202.24 115.04Q203.712 114.59200000000001 204.35199999999998 113.82400000000001Q204.992 113.05600000000001 204.992 111.64800000000001V40.224000000000004Q204.992 38.88000000000001 204.35199999999998 38.14400000000001Q203.712 37.408000000000015 202.24 36.96000000000001L198.016 36.128000000000014Q196.032 35.360000000000014 196.032 33.56800000000001Q196.032 32.41600000000001 196.736 31.808000000000007Q197.44 31.200000000000003 198.784 31.200000000000003H229.184Q230.528 31.200000000000003 231.2 31.840000000000003Q231.872 32.480000000000004 231.872 33.56800000000001Q231.872 35.360000000000014 229.888 36.128000000000014L225.728 36.96000000000001Q224.256 37.408000000000015 223.584 38.14400000000001Q222.912 38.88000000000001 222.912 40.224000000000004ZM304.064 28.256000000000014V112.608Q304.064 114.272 304.48 115.00800000000001Q304.896 115.74400000000001 305.92 116.06400000000001L308.544 116.64000000000001Q309.312 117.02400000000002 309.664 117.53600000000002Q310.016 118.04800000000002 310.016 118.81600000000002Q310.016 119.77600000000001 309.44000000000005 120.28800000000001Q308.86400000000003 120.80000000000001 307.84000000000003 120.80000000000001H284.544Q283.584 120.80000000000001 282.976 120.28800000000001Q282.368 119.77600000000001 282.368 118.81600000000002Q282.368 118.04800000000002 282.784 117.53600000000002Q283.2 117.02400000000002 283.968 116.64000000000001L286.592 116.06400000000001Q287.616 115.74400000000001 288.032 115.00800000000001Q288.448 114.272 288.448 112.608V37.85600000000001Q288.448 36.57600000000001 288.096 36.06400000000001Q287.744 35.55200000000001 286.91200000000003 35.29600000000001L283.584 35.168000000000006Q282.752 34.912000000000006 282.4 34.464000000000006Q282.048 34.016000000000005 282.048 33.31200000000001Q282.048 32.54400000000001 282.528 32.00000000000001Q283.008 31.456000000000003 284.16 31.072000000000003L297.98400000000004 26.720000000000013Q299.52 26.208000000000013 300.32 26.016000000000012Q301.12 25.824000000000012 301.824 25.824000000000012Q302.91200000000003 25.824000000000012 303.48800000000006 26.49600000000001Q304.064 27.168000000000006 304.064 28.256000000000014ZM345.28000000000003 113.69600000000001V112.54400000000001L344.25600000000003 112.67200000000001V76.0Q344.25600000000003 71.64800000000001 342.30400000000003 69.31200000000001Q340.35200000000003 66.97600000000001 336.76800000000003 66.97600000000001Q333.184 66.97600000000001 331.29600000000005 68.70400000000001Q329.408 70.43200000000002 329.408 72.80000000000001V76.83200000000001Q329.408 80.352 327.232 82.432Q325.05600000000004 84.512 321.28000000000003 84.512Q318.08000000000004 84.512 316.384 82.84800000000001Q314.68800000000005 81.18400000000001 314.68800000000005 78.048Q314.68800000000005 74.4 317.47200000000004 71.00800000000001Q320.25600000000003 67.61600000000001 325.72800000000007 65.47200000000001Q331.20000000000005 63.32800000000001 339.20000000000005 63.32800000000001Q349.56800000000004 63.32800000000001 354.75200000000007 67.712Q359.93600000000004 72.096 359.93600000000004 80.03200000000001V110.94400000000002Q359.93600000000004 112.73600000000002 360.60800000000006 113.66400000000002Q361.28000000000003 114.59200000000001 362.56 114.59200000000001Q363.52000000000004 114.59200000000001 364.22400000000005 114.11200000000001Q364.928 113.632 365.24800000000005 112.54400000000001Q365.37600000000003 112.28800000000001 365.6 112.12800000000001Q365.824 111.96800000000002 366.144 111.96800000000002Q366.72 111.96800000000002 367.00800000000004 112.44800000000001Q367.29600000000005 112.92800000000001 367.29600000000005 113.632Q367.29600000000005 115.36000000000001 366.08000000000004 117.31200000000001Q364.86400000000003 119.26400000000001 362.336 120.64000000000001Q359.808 122.016 355.904 122.016Q350.848 122.016 348.064 119.68Q345.28000000000003 117.34400000000001 345.28000000000003 113.69600000000001ZM311.93600000000004 108.12800000000001Q311.93600000000004 100.64000000000001 318.08000000000004 96.22400000000002Q324.22400000000005 91.808 336.064 91.808Q339.52000000000004 91.808 342.24 92.44800000000001Q344.96000000000004 93.08800000000001 347.072 94.04800000000002L346.048 97.05600000000001Q344.064 96.096 341.952 95.584Q339.84000000000003 95.072 337.344 95.072Q332.736 95.072 330.144 97.82400000000001Q327.552 100.57600000000001 327.552 105.504Q327.552 110.30400000000002 329.92 112.76800000000001Q332.288 115.23200000000001 336.12800000000004 115.23200000000001Q339.00800000000004 115.23200000000001 341.66400000000004 113.85600000000002Q344.32000000000005 112.48000000000002 346.048 110.11200000000001L347.072 112.864Q344.25600000000003 117.21600000000001 339.232 119.61600000000001Q334.208 122.016 328.32 122.016Q320.832 122.016 316.384 118.17600000000002Q311.93600000000004 114.33600000000001 311.93600000000004 108.12800000000001ZM388.15999999999997 89.24800000000002Q388.15999999999997 80.54400000000001 390.496 74.816Q392.832 69.08800000000001 396.608 66.20800000000001Q400.384 63.32800000000001 404.736 63.32800000000001Q409.728 63.32800000000001 412.416 66.432Q415.104 69.536 415.104 75.424Q415.104 80.54400000000001 412.96 82.97600000000001Q410.816 85.40800000000002 407.552 85.40800000000002Q404.224 85.40800000000002 402.592 83.68Q400.96 81.95200000000001 400.896 78.68800000000002L400.832 76.57600000000001Q400.832 74.656 400.06399999999996 73.69600000000001Q399.296 72.73600000000002 397.504 72.73600000000002Q395.456 72.73600000000002 393.664 74.56000000000002Q391.872 76.38400000000001 390.752 80.03200000000001Q389.632 83.68 389.632 89.12ZM389.18399999999997 66.46400000000001 389.632 83.424V112.41600000000001Q389.632 113.888 390.20799999999997 114.784Q390.784 115.68 392.0 115.87200000000001L397.248 116.70400000000001Q398.272 116.83200000000001 398.72 117.40800000000002Q399.168 117.98400000000001 399.168 118.81600000000002Q399.168 119.71200000000002 398.592 120.25600000000001Q398.016 120.80000000000001 396.864 120.80000000000001H370.24Q369.216 120.80000000000001 368.608 120.25600000000001Q368.0 119.71200000000002 368.0 118.81600000000002Q368.0 118.04800000000002 368.416 117.53600000000002Q368.832 117.02400000000002 369.6 116.64000000000001L372.16 116.06400000000001Q373.18399999999997 115.74400000000001 373.6 115.00800000000001Q374.016 114.272 374.016 112.73600000000002V75.48800000000001Q374.016 74.20800000000001 373.696 73.66400000000002Q373.376 73.12 372.544 72.864L369.088 72.80000000000001Q368.32 72.48000000000002 367.96799999999996 72.03200000000001Q367.616 71.584 367.616 70.94400000000002Q367.616 70.17600000000002 368.096 69.60000000000001Q368.576 69.024 369.792 68.64000000000001L383.808 64.608Q385.088 64.16000000000001 385.88800000000003 63.96800000000001Q386.688 63.77600000000001 387.264 63.77600000000001Q388.15999999999997 63.77600000000001 388.60799999999995 64.38400000000001Q389.056 64.99200000000002 389.18399999999997 66.46400000000001ZM437.568 28.256000000000014V112.608Q437.568 114.272 437.984 115.00800000000001Q438.4 115.74400000000001 439.424 116.06400000000001L442.04799999999994 116.64000000000001Q442.816 117.02400000000002 443.168 117.53600000000002Q443.52 118.04800000000002 443.52 118.81600000000002Q443.52 119.77600000000001 442.94399999999996 120.28800000000001Q442.368 120.80000000000001 441.344 120.80000000000001H418.04799999999994Q417.08799999999997 120.80000000000001 416.47999999999996 120.28800000000001Q415.87199999999996 119.77600000000001 415.87199999999996 118.81600000000002Q415.87199999999996 118.04800000000002 416.28799999999995 117.53600000000002Q416.70399999999995 117.02400000000002 417.472 116.64000000000001L420.09599999999995 116.06400000000001Q421.11999999999995 115.74400000000001 421.53599999999994 115.00800000000001Q421.952 114.272 421.952 112.608V37.85600000000001Q421.952 36.57600000000001 421.6 36.06400000000001Q421.248 35.55200000000001 420.416 35.29600000000001L417.08799999999997 35.168000000000006Q416.256 34.912000000000006 415.904 34.464000000000006Q415.55199999999996 34.016000000000005 415.55199999999996 33.31200000000001Q415.55199999999996 32.54400000000001 416.0319999999999 32.00000000000001Q416.51199999999994 31.456000000000003 417.664 31.072000000000003L431.48799999999994 26.720000000000013Q433.02399999999994 26.208000000000013 433.82399999999996 26.016000000000012Q434.62399999999997 25.824000000000012 435.328 25.824000000000012Q436.41599999999994 25.824000000000012 436.99199999999996 26.49600000000001Q437.568 27.168000000000006 437.568 28.256000000000014ZM474.56 63.39200000000001Q483.13599999999997 63.39200000000001 489.63199999999995 67.13600000000001Q496.128 70.88000000000001 499.84 77.536Q503.55199999999996 84.19200000000001 503.55199999999996 92.89600000000002Q503.55199999999996 101.28000000000002 499.74399999999997 107.87200000000001Q495.936 114.46400000000001 489.28 118.24000000000001Q482.62399999999997 122.016 473.91999999999996 122.016Q465.40799999999996 122.016 458.88 118.304Q452.352 114.59200000000001 448.70399999999995 108.00000000000001Q445.056 101.40800000000002 445.056 92.76800000000001Q445.056 84.32000000000001 448.79999999999995 77.696Q452.544 71.072 459.2 67.232Q465.856 63.39200000000001 474.56 63.39200000000001ZM478.336 117.21600000000001Q482.048 116.70400000000001 484.384 113.44000000000001Q486.71999999999997 110.17600000000002 487.456 104.44800000000001Q488.192 98.72000000000001 486.912 90.784Q485.632 82.59200000000001 483.2 77.376Q480.768 72.16000000000001 477.472 69.888Q474.176 67.61600000000001 470.272 68.19200000000001Q466.496 68.768 464.15999999999997 72.03200000000001Q461.82399999999996 75.29600000000002 461.18399999999997 81.02400000000002Q460.544 86.75200000000001 461.76 94.62400000000001Q463.03999999999996 102.68800000000002 465.472 107.90400000000001Q467.904 113.12 471.23199999999997 115.45600000000002Q474.56 117.79200000000002 478.336 117.21600000000001ZM463.808 58.84800000000001Q460.224 58.84800000000001 458.08 56.67200000000001Q455.936 54.49600000000001 455.936 50.84800000000001Q455.936 47.26400000000001 458.08 45.05600000000001Q460.224 42.84800000000001 463.808 42.84800000000001Q467.392 42.84800000000001 469.504 45.05600000000001Q471.616 47.26400000000001 471.616 50.84800000000001Q471.616 54.432000000000016 469.504 56.640000000000015Q467.392 58.84800000000001 463.808 58.84800000000001ZM484.736 58.84800000000001Q481.216 58.84800000000001 479.04 56.67200000000001Q476.86400000000003 54.49600000000001 476.86400000000003 50.84800000000001Q476.86400000000003 47.26400000000001 479.04 45.05600000000001Q481.216 42.84800000000001 484.736 42.84800000000001Q488.384 42.84800000000001 490.528 45.05600000000001Q492.672 47.26400000000001 492.672 50.84800000000001Q492.672 54.432000000000016 490.528 56.640000000000015Q488.384 58.84800000000001 484.736 58.84800000000001ZM527.8720000000001 67.424Q523.7760000000001 67.424 521.504 69.47200000000001Q519.232 71.52000000000001 519.232 74.78400000000002Q519.232 76.89600000000002 520.2239999999999 78.656Q521.216 80.41600000000001 523.712 81.92000000000002Q526.208 83.424 530.624 84.768Q538.688 87.20000000000002 543.232 90.08000000000001Q547.7760000000001 92.96000000000001 549.664 96.608Q551.552 100.25600000000001 551.552 105.05600000000001Q551.552 112.92800000000001 546.144 117.56800000000001Q540.736 122.20800000000001 530.7520000000001 122.20800000000001Q526.976 122.20800000000001 524.512 121.47200000000001Q522.048 120.73600000000002 520.544 120.03200000000001Q519.04 119.32800000000002 518.272 119.32800000000002Q517.504 119.32800000000002 516.4159999999999 120.03200000000001Q515.328 120.73600000000002 514.208 121.47200000000001Q513.088 122.20800000000001 512.192 122.20800000000001Q511.488 122.20800000000001 510.88 121.72800000000001Q510.27200000000005 121.248 509.88800000000003 119.84000000000002L506.944 106.72000000000001Q506.49600000000004 104.92800000000001 506.72 103.77600000000001Q506.944 102.62400000000001 507.904 102.17600000000002Q508.928 101.72800000000001 509.92 102.17600000000002Q510.91200000000003 102.62400000000001 511.68 103.77600000000001Q514.624 109.15200000000002 517.472 112.28800000000001Q520.32 115.424 523.392 116.80000000000001Q526.464 118.17600000000002 529.9200000000001 118.17600000000002Q534.592 118.17600000000002 536.96 115.96800000000002Q539.328 113.76 539.328 110.36800000000001Q539.328 108.06400000000001 538.208 106.17600000000002Q537.088 104.28800000000001 534.24 102.68800000000002Q531.392 101.08800000000001 526.144 99.68Q519.488 97.82400000000001 515.232 95.168Q510.976 92.51200000000001 508.96000000000004 88.864Q506.944 85.21600000000001 506.944 80.48000000000002Q506.944 75.29600000000002 509.504 71.45600000000002Q512.0640000000001 67.61600000000001 516.576 65.47200000000001Q521.088 63.32800000000001 526.976 63.32800000000001Q530.816 63.32800000000001 533.28 64.224Q535.744 65.12 537.152 66.016Q538.5600000000001 66.912 539.072 66.912Q539.7760000000001 66.912 540.7040000000001 66.048Q541.6320000000001 65.18400000000001 542.6880000000001 64.32000000000001Q543.744 63.45600000000001 544.576 63.45600000000001Q545.408 63.45600000000001 545.952 64.00000000000001Q546.496 64.54400000000001 546.7520000000001 65.888L549.12 78.17600000000002Q549.504 80.16000000000001 549.312 81.18400000000001Q549.12 82.20800000000001 548.1600000000001 82.52800000000002Q547.328 82.78400000000002 546.432 82.27200000000002Q545.5360000000001 81.76000000000002 544.768 80.608Q540.8000000000001 73.44000000000001 536.672 70.43200000000002Q532.544 67.424 527.8720000000001 67.424ZM557.3760000000001 69.85600000000001 553.344 69.024Q552.384 68.70400000000001 552.096 68.12800000000001Q551.8080000000001 67.552 551.8080000000001 66.78400000000002Q551.8080000000001 65.82400000000001 552.4480000000001 65.21600000000001Q553.0880000000001 64.608 554.1120000000001 64.608H558.272Q558.9760000000001 64.608 559.5200000000001 64.224Q560.0640000000001 63.84000000000001 560.768 62.68800000000001L568.6400000000001 53.08800000000001Q569.4720000000001 52.000000000000014 570.336 51.39200000000001Q571.2 50.784000000000006 572.1600000000001 50.784000000000006Q573.12 50.784000000000006 573.7280000000001 51.42400000000001Q574.336 52.06400000000001 574.336 53.408000000000015V104.352Q574.336 108.76800000000001 576.032 110.97600000000001Q577.7280000000001 113.18400000000001 580.864 113.18400000000001Q582.336 113.18400000000001 583.488 112.67200000000001Q584.6400000000001 112.16000000000001 585.5680000000001 111.29600000000002Q586.4960000000001 110.43200000000002 587.2320000000001 109.44000000000001Q587.9680000000001 108.44800000000001 588.6080000000001 107.552Q589.12 107.36000000000001 589.504 107.74400000000001Q589.888 108.12800000000001 589.8240000000001 109.21600000000001Q589.312 112.99200000000002 587.36 115.87200000000001Q585.408 118.75200000000001 582.2080000000001 120.38400000000001Q579.008 122.016 574.6560000000001 122.016Q567.104 122.016 563.0400000000001 118.208Q558.9760000000001 114.4 558.9760000000001 106.4V72.73600000000002Q558.9760000000001 71.52000000000001 558.72 70.84800000000001Q558.464 70.17600000000002 557.3760000000001 69.85600000000001ZM568.768 69.536 569.0240000000001 64.608H587.7760000000001Q588.9280000000001 64.608 589.5040000000001 65.08800000000001Q590.08 65.56800000000001 590.08 66.46400000000001Q590.08 67.744 588.9280000000001 68.64Q587.7760000000001 69.536 585.2800000000001 69.536Z" fill="#15201C"/></symbol></svg>
+<a class="skip" href="#main">Hoppa till innehållet</a>
+<header class="top"><div class="wrap">
+  <a href="#" aria-label="Klarlöst – till toppen"><svg class="wordmark" viewBox="0 0.00 590.08 152.00" role="img" aria-label="Klarlöst"><use href="#klarlost-logo"/></svg></a>
+  <nav aria-label="Meny"><ul>
+    <li><a href="#tjansten">Vad du får</a></li><li><a href="#sa-funkar-det">Så funkar det</a></li>
+    <li><a href="#pris">Pris</a></li><li><a href="#om">Om oss</a></li>
+    <li class="cta"><a href="#kontakt">Kontakt</a></li>
+  </ul></nav>
+</div></header>
 
 <main id="main">
-  <div class="wrap hero">
-    <p class="eyebrow">AI-automation · Göteborg</p>
-    <h1>Vi gör vardagen <em>klarlöst</em>.</h1>
-    <p class="lead">AI-automation och digitala lösningar för små och medelstora företag. Mindre administration, fler nöjda kunder – och mer tid till det du är bra på.</p>
+<section class="hero">
+  <div class="glow" aria-hidden="true"></div><div class="gridbg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">Smart AI och automation för företag</div>
+    <h1>Vi gör vardagen enklare<br class="dbr"> <span class="grad">för ditt företag.</span></h1>
+    <p class="lead">Mindre administration, färre missade kunder och mer tid för det som faktiskt betyder något. Vi sköter tekniken i bakgrunden – du märker bara att det flyter.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="mailto:jesper.klarlost@gmail.com?subject=Boka%20ett%20kostnadsfritt%20samtal">Boka ett kostnadsfritt samtal <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="https://klarlost.github.io/demo/">Testa demon</a>
+      <a class="btn pri" href="#kontakt">Testa gratis i 30 dagar <span class="ar">→</span></a>
+      <a class="btn ghost" href="https://klarlost.github.io/demo/bot/" target="_blank" rel="noopener">Prova demon</a>
     </div>
-    <small>15 minuter, helt utan förpliktelser.</small>
+    <p class="note"><b>2 900 kr i start + 990 kr/mån</b> exkl. moms · Ingen teknikkunskap behövs</p>
+    <div class="window" aria-label="Exempel på en konversation">
+      <div class="window-in">
+        <div class="wbar"><span class="dots"><i></i><i></i><i></i></span><b>Kundassistenten</b><span class="live">Svarar nu</span></div>
+        <div class="msgs">
+          <div class="msg u">Hej! Har ni någon tid ledig på lördag?</div>
+          <div class="msg b">Hej! Lördag 10.00 eller 13.30 är lediga. Vill du att jag skickar en förfrågan om någon av dem?</div>
+          <div class="msg u">13.30 blir perfekt.</div>
+          <div class="msg b">Toppen – förfrågan är skickad. Du får en bekräftelse så snart den är godkänd.</div>
+        </div>
+        <div class="wcap">Påhittat exempel – så kan det se ut för en salong eller klinik.</div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <section id="tjanster">
-    <div class="wrap">
-      <div class="head">
-        <div><p class="eyebrow">Tjänster</p><h2>Det vi automatiserar åt dig</h2></div>
-        <p class="lead">Smarta flöden som tar hand om de återkommande uppgifterna – så att du slipper.</p>
-      </div>
-      <ul class="list">
-        <li><span class="num">01</span><h3>AI-kundassistent</h3><p>Svarar på kundernas frågor dygnet runt – på hemsidan och i sociala medier.</p></li>
-        <li><span class="num">02</span><h3>Bokning &amp; leads</h3><p>Fångar bokningar och förfrågningar automatiskt, så att inget faller mellan stolarna.</p></li>
-        <li><span class="num">03</span><h3>Påminnelser &amp; uppföljning</h3><p>SMS och mejl för påminnelser, återbokning och recensionsförfrågningar.</p></li>
-        <li><span class="num">04</span><h3>Offert &amp; fakturaflöden</h3><p>Från förfrågan till offert och faktura – med färre manuella steg.</p></li>
-        <li><span class="num">05</span><h3>Inkorg &amp; kundtjänst</h3><p>Sortering av inkommande mejl och färdiga svarsutkast att godkänna.</p></li>
-        <li><span class="num">06</span><h3>Skräddarsydda automationer</h3><p>Formulär, CRM, rapporter och kopplingar mellan de system du redan använder.</p></li>
+<section id="tjansten"><div class="wrap">
+  <div class="head rv"><div class="eyebrow">Vad du får</div><h2>Mindre att hålla koll på.<br><span style="color:var(--muted)">Mer tid till det viktiga.</span></h2>
+    <p class="sub">Det är resultatet som räknas – inte tekniken bakom.</p></div>
+  <div class="bento three">
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6.5h14v9H10l-4 3v-3H5z"/><path d="M9 11h6"/></svg></div>
+      <h3>Kunderna får svar direkt</h3><p>Frågor besvaras på sekunder, även kvällar och helger. Ingen behöver vänta – och ingen går vidare till någon annan.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2.5"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3>Mindre administration</h3><p>Återkommande frågor, förfrågningar och uppföljning sköts automatiskt och landar färdiga hos dig.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
+      <h3>Mer tid för det viktiga</h3><p>Timmarna som förut gick till samma svar och samma mejl får du tillbaka – till kunderna och verksamheten.</p></div>
+  </div>
+  <p class="how rv"><b>Hur?</b> Med en AI-assistent och smarta automationer som byggs efter just ditt företag – på hemsidan, i WhatsApp eller där det passar dig.</p>
+</div></section>
+
+<section id="sa-funkar-det"><div class="wrap">
+  <div class="head rv"><div class="eyebrow">Så funkar det</div><h2>Tre steg. Vi sköter resten.</h2>
+    <p class="sub">Du berättar hur din vardag ser ut – vi tar hand om tekniken.</p></div>
+  <ol class="steps">
+    <li class="rv"><h3>Ett kort samtal</h3><p>Kostnadsfritt. Vi tittar på var tiden försvinner och vad som går att förenkla.</p></li>
+    <li class="rv"><h3>Vi sätter upp allt</h3><p>Anpassat efter dina rutiner, priser och verktyg. Du behöver inte lära dig något nytt.</p></li>
+    <li class="rv"><h3>Du testar i 30 dagar</h3><p>Allt körs på riktigt. Vi följer upp tillsammans och justerar tills det sitter.</p></li>
+  </ol>
+</div></section>
+
+<section id="pris"><div class="wrap">
+  <div class="head rv"><div class="eyebrow">Pris</div><h2>Ett tydligt pris.</h2><p class="sub">Inga konstigheter – samma pris för de flesta småföretag.</p></div>
+  <div class="pricing">
+    <div class="plan rv">
+      <div class="name">AI-assistent för hemsida &amp; WhatsApp</div>
+      <p class="offer">Öppningspris – gäller de 100 första kunderna</p>
+      <p class="amount">990 kr<small>/ mån</small></p>
+      <p class="start">+ 2 900 kr i startavgift</p>
+      <ul>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="2.6" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="7.5" opacity=".35"/></svg>Anpassad efter ditt företag</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="2.6" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="7.5" opacity=".35"/></svg>Svarar dygnet runt, på svenska</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="2.6" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="7.5" opacity=".35"/></svg>Förfrågningar och bokningsfrågor skickas till dig</li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="2.6" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="7.5" opacity=".35"/></svg>Löpande justeringar och support</li>
       </ul>
-      <p class="trades"><strong>Passar bland annat</strong> salonger &amp; skönhet, hantverkare, kliniker, restauranger, byråer samt butiker &amp; e-handel.</p>
+      <a class="btn pri" href="#kontakt">Kom igång <span class="ar">→</span></a>
+      <p class="vat">Alla priser exkl. moms.</p>
     </div>
-  </section>
+    <div class="trial rv" id="gratis">
+      <span class="big grad">30</span>
+      <h3>dagar gratis</h3>
+      <p>Prova i skarpt läge på ditt eget företag innan du bestämmer dig.</p>
+      <p>Se själv hur mycket som sköter sig självt – och hur mycket tid du får tillbaka.</p>
+      <a class="tlink" href="https://klarlost.github.io/demo/bot/" target="_blank" rel="noopener">Vill du se först? Prova demon <span>→</span></a>
+    </div>
+  </div>
+</div></section>
 
-  <section id="sa-funkar-det">
-    <div class="wrap">
-      <div class="head">
-        <div><p class="eyebrow">Så funkar det</p><h2>Enkelt från start</h2></div>
-        <p class="lead">Fyra steg – och du behöver inte kunna något om AI.</p>
-      </div>
-      <ol class="steps">
-        <li><h3>Kostnadsfritt samtal</h3><p>15 minuter där vi går igenom din vardag och vad som tar mest tid.</p></li>
-        <li><h3>Vi bygger lösningen</h3><p>Anpassad efter ditt företag och de verktyg du redan har.</p></li>
-        <li><h3>30 dagars provperiod</h3><p>Testa i skarpt läge innan du bestämmer dig.</p></li>
-        <li><h3>Vi finns kvar</h3><p>Löpande stöd och förbättringar när verksamheten förändras.</p></li>
-      </ol>
+<section id="om"><div class="wrap about">
+  <div class="rv"><div class="eyebrow">Om Klarlöst</div></div>
+  <div class="rv">
+    <p class="statement">Smart teknik som gör vardagen lättare. <em>Utan krångel och utan tekniksnack.</em></p>
+    <div class="txt">
+      <p>Klarlöst hjälper företag att få vardagen att flyta – med AI och automation som tar hand om det återkommande, så att mer tid blir över till kunderna.</p>
+      <p>Hos oss får du en kontaktperson, lösningar som passar din vardag och hjälp som finns kvar efteråt.</p>
     </div>
-  </section>
+  </div>
+</div></section>
 
-  <section id="priser">
-    <div class="wrap">
-      <div class="head">
-        <div><p class="eyebrow">Priser</p><h2>Tydliga priser</h2></div>
-        <p class="lead">Alla priser anges exklusive moms.</p>
-      </div>
-      <div class="prices">
-        <article class="plan dark">
-          <h3>SalongsAssistenten</h3>
-          <p class="for">Färdig AI-assistent för salonger.</p>
-          <p class="price">990 kr <span>/ månad</span></p>
-          <ul>
-            <li>2 900 kr i uppstart</li>
-            <li>+400 kr/mån per extra salong</li>
-            <li>30 dagars gratis provperiod</li>
-          </ul>
-          <a class="btn btn-primary" href="mailto:jesper.klarlost@gmail.com?subject=SalongsAssistenten%20%E2%80%93%20boka%20ett%20kostnadsfritt%20samtal">Boka ett samtal <span class="arrow" aria-hidden="true">→</span></a>
-          <p class="note">Exkl. moms.</p>
-        </article>
-        <article class="plan">
-          <h3>Skräddarsydd lösning</h3>
-          <p class="for">För alla andra företag och behov.</p>
-          <p class="price">Efter behov</p>
-          <ul>
-            <li>Offert inom 24 h</li>
-            <li>Byggs för just din verksamhet</li>
-            <li>Kostnadsfritt första samtal</li>
-          </ul>
-          <a class="btn btn-ghost" href="mailto:jesper.klarlost@gmail.com?subject=Offertf%C3%B6rfr%C3%A5gan%20%E2%80%93%20skr%C3%A4ddarsydd%20l%C3%B6sning">Begär offert <span class="arrow" aria-hidden="true">→</span></a>
-        </article>
-      </div>
-      <div class="demo" id="demo">
-        <p>Se hur det fungerar<span>Testa vår demo för en påhittad salong.</span></p>
-        <a class="link" href="https://klarlost.github.io/demo/">Öppna demon <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
+<section id="kontakt"><div class="wrap">
+  <div class="contact-card rv"><div class="contact-in">
+    <div>
+      <div class="eyebrow">Kontakt</div>
+      <h2 style="margin-top:22px">Hör av dig.</h2>
+      <p class="sub">Berätta kort om ditt företag och vad som tar mest tid, så återkommer vi. Vill du börja de 30 gratis dagarna räcker det att skriva ”Jag vill testa”.</p>
+      <!-- ======================================================================
+           BYT E-POST HÄR – det enda stället adressen står på sidan.
+           Ändra både href och texten nedan.
+           Alla andra mejlknappar och formuläret läser adressen härifrån.
+           ====================================================================== -->
+      <a id="kontakt-epost" class="mail" href="mailto:info.klarlost@gmail.com">info.klarlost@gmail.com</a>
     </div>
-  </section>
-
-  <section id="om">
-    <div class="wrap about">
-      <div><p class="eyebrow">Om oss</p><h2>Lokalt och personligt</h2></div>
-      <div class="body">
-        <p>Klarlöst startades av Jesper Johannesson i Göteborg med en enkel idé: att hjälpa små företag att spara tid med AI – utan krångel och utan tekniksnack.</p>
-        <p>Du får en person att prata med, lösningar som passar din vardag och någon som finns kvar efteråt.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="contact">
-    <div class="wrap">
-      <p class="eyebrow">Kontakt</p>
-      <h2>Redo att göra vardagen lite enklare?</h2>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:jesper.klarlost@gmail.com?subject=Boka%20ett%20kostnadsfritt%20samtal">Boka ett kostnadsfritt samtal <span class="arrow" aria-hidden="true">→</span></a>
-      </div>
-      <div class="cinfo">
-        <a href="mailto:jesper.klarlost@gmail.com">jesper.klarlost@gmail.com</a>
-        <span>Göteborg</span>
-      </div>
-    </div>
-  </section>
+    <form id="kontaktform" novalidate>
+      <label>Namn<input name="namn" autocomplete="name" required></label>
+      <label>Företag<input name="foretag" autocomplete="organization"></label>
+      <label>Din e-post<input name="epost" type="email" autocomplete="email"></label>
+      <label>Meddelande<textarea name="meddelande" placeholder="Vad vill du ha hjälp med?"></textarea></label>
+      <button class="btn pri" type="submit">Skicka via e-post <span class="ar">→</span></button>
+      <p class="note">Knappen öppnar ditt e-postprogram med meddelandet ifyllt – inget sparas på sidan.</p>
+      <p class="note">Vi behandlar dina uppgifter enligt vår <a class="ul" href="integritetspolicy.html">integritetspolicy</a>.</p>
+    </form>
+  </div></div>
+</div></section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Klarlöst · Göteborg</span>
-    <span><a href="mailto:jesper.klarlost@gmail.com">jesper.klarlost@gmail.com</a></span>
-  </div>
-</footer>
+<footer><div class="wrap">
+  <svg class="wordmark" viewBox="0 0.00 590.08 152.00" role="img" aria-label="Klarlöst"><use href="#klarlost-logo"/></svg>
+  <div>© <span id="ar">2026</span> Klarlöst · <a class="js-mail" href="#kontakt">E-post</a> · <a href="integritetspolicy.html">Integritetspolicy</a></div>
+</div></footer>
+<script>
+(function(){
+  var a=document.getElementById('kontakt-epost');
+  var EPOST=a.getAttribute('href').replace(/^mailto:/,'');   // läses från det enda stället ovan
+  function mailto(subject,body){return 'mailto:'+EPOST+'?subject='+encodeURIComponent(subject||'Kontakt via hemsidan')+(body?'&body='+encodeURIComponent(body):'');}
+  document.querySelectorAll('.js-mail').forEach(function(el){el.href=mailto(el.getAttribute('data-subject'));});
+  document.getElementById('kontaktform').addEventListener('submit',function(e){
+    e.preventDefault(); var f=e.target;
+    var body='Namn: '+f.namn.value+'\nFöretag: '+f.foretag.value+'\nE-post: '+f.epost.value+'\n\n'+f.meddelande.value;
+    window.location.href=mailto('Intresse för Klarlöst – '+(f.foretag.value||f.namn.value||'Klarlöst'),body);
+  });
+  document.getElementById('ar').textContent=new Date().getFullYear();
+  var t=document.querySelector('.top');function s(){t.classList.toggle('scrolled',window.scrollY>8);}window.addEventListener('scroll',s,{passive:true});s();
+  // mjuk scroll-reveal (av vid prefers-reduced-motion via CSS)
+  var els=document.querySelectorAll('.rv,.window');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('in');});
+  // ljus som följer muspekaren på korten
+  document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});});
+})();
+</script>
 </body>
 </html>
